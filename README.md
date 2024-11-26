@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-# About
+# gev-stack
 
 Thinking about what the market is using and what is the best...
 
@@ -10,8 +8,7 @@ Thinking about what the market is using and what is the best...
 - [Bun](https://bun.sh)
 - [Supabase](https://supabase.com)
 - [Auth.js](https://authjs.dev)
-- Mantine
-    - *Why not ***v0***, it's faster to get things done with Mantine.
+- [Mantine](https://mantine.dev) - `@mantine/form` included!
 - [Stripe](https://stripe.com)
 
 ### Why not
@@ -21,6 +18,7 @@ Thinking about what the market is using and what is the best...
 
 - **Appwrite?**
     - It's a great platform but Supabase has more community support. Also, while both platforms don't support transactions, Supabase at least has RPC.
+
 - **Shadcn & Tailwind CSS?**
     - While they are a great combination and can benefit from
 

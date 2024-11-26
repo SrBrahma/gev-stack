@@ -1,10 +1,19 @@
+import {
+  Switch,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from "@mantine/core";
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const MantineSwitch = () => {
+  return <Switch defaultChecked label="I am a Mantine Switch!" />;
+};
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <MantineSwitch />
         <Image
           className={styles.logo}
           src="/next.svg"
