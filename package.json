@@ -3,22 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "tsw": "tsc --noEmit --watch --preserveWatchOutput",
+    "format": "biome check --unsafe --fix . && eslint --fix . package.json",
+    "format:check": "biome check --unsafe . && eslint . package.json",
+    "dev": "bun i && concurrently -c blue,green -n tsw,next \"bun tsw --preserveWatchOutput\" \"next dev --turbopack\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky",
+    "pre-commit": "",
+    "pre-commitNO": "bun format && git add -A"
   },
   "dependencies": {
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "zod": "3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "1.9.4",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "concurrently": "9.1.0",
+    "eslint": "8.57.0",
+    "eslint-config-gev": "4.6.0",
+    "eslint-config-next": "15.0.3",
+    "husky": "9.1.7",
+    "typescript": "5.7.2"
   }
 }

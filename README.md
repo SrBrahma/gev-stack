@@ -1,16 +1,34 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# About
+
+Thinking about what the market is using and what is the best...
+
+# The Stack
+
+- [Next.js](https://nextjs.org)
+- [Bun](https://bun.sh)
+- [Supabase](https://supabase.com)
+- [Auth.js](https://authjs.dev)
+- Mantine
+    - *Why not ***v0***, it's faster to get things done with Mantine.
+- [Stripe](https://stripe.com)
+
+### Why not
+
+- **Remix?**
+    - Remix is a great tool, but unfortunatelly there aren't Remix jobs in the market nowadays. Also, it's less straightforward than Next.js to deploy it.
+
+- **Appwrite?**
+    - It's a great platform but Supabase has more community support. Also, while both platforms don't support transactions, Supabase at least has RPC.
+- **Shadcn & Tailwind CSS?**
+    - While they are a great combination and can benefit from
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
