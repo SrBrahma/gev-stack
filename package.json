@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "pre-commit": "",
+    "pre-commit": "echo 0",
     "pre-commitNO": "bun format && git add -A"
   },
   "dependencies": {
