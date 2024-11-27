@@ -6,7 +6,7 @@ Thinking about what the market is using and what is the best...
 
 - [Next.js](https://nextjs.org)
 - [Bun](https://bun.sh)
-- [Supabase](https://supabase.com)
+- [Supabase](https://supabase.com) - Postgres and Auth!
 - [Mantine](https://mantine.dev) - `@mantine/form` included!
 - [Stripe](https://stripe.com)
 - [Zod](https://github.com/colinhacks/zod)
