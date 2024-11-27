@@ -7,24 +7,18 @@ Thinking about what the market is using and what is the best...
 - [Next.js](https://nextjs.org)
 - [Bun](https://bun.sh)
 - [Supabase](https://supabase.com)
-- [Auth.js](https://authjs.dev)
 - [Mantine](https://mantine.dev) - `@mantine/form` included!
 - [Stripe](https://stripe.com)
-
-### Why not
-
-- **Remix?**
-    - Remix is a great tool, but unfortunatelly there aren't Remix jobs in the market nowadays. Also, it's less straightforward than Next.js to deploy it.
-
-- **Appwrite?**
-    - It's a great platform but Supabase has more community support. Also, while both platforms don't support transactions, Supabase at least has RPC.
-
-- **Shadcn & Tailwind CSS?**
-    - While they are a great combination and can benefit from
+- [Zod](https://github.com/colinhacks/zod)
+- [@t3-oss/env-nextjs](https://github.com/t3-oss/t3-env) - Typesafe ENVs!
 
 ## Getting Started
 
-First, run the development server:
+1) Clone this project and import it into [Next.js](https://nextjs.org).
+1) Go to the settings of this new Next.js project and do the integration with Supabase.
+1) Create the given `.env.local` file.
+
+Run the development server:
 
 ```bash
 bun dev
@@ -32,21 +26,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Why not
 
-To learn more about Next.js, take a look at the following resources:
+- **Remix?**
+    - Remix is a great tool, but unfortunatelly there aren't Remix jobs in the market nowadays. Also, it's less straightforward than Next.js to deploy it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Auth.js?**
+    - It's a great tool but if you want to have "Forgot my password" and other auth-email-sending procedures, you need to also connect and setup an email provider. Supabase skips this.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Appwrite?**
+    - It's a great platform but Supabase has more community support. Also, while both platforms don't support transactions, Supabase at least has RPC.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Shadcn & Tailwind CSS?**
+    - While they are a great combination, I personaly prefer Mantine for productivity and simplicity.
