@@ -1,3 +1,1 @@
-export default function ErrorPage() {
-  return <p>Sorry, something went wrong</p>;
-}
+export default () => <p>{"Sorry, something went wrong"}</p>;

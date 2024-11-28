@@ -7,7 +7,7 @@ import { env } from "../env";
  *
  * You shouldn't need to change this function.
  */
-export async function updateSession(request: NextRequest) {
+export const updateSession = async (request: NextRequest) => {
   let supabaseResponse = NextResponse.next({
     request,
   });
@@ -17,11 +17,9 @@ export async function updateSession(request: NextRequest) {
     env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
+        getAll: () => request.cookies.getAll(),
+        setAll: (cookiesToSet) => {
+          cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value),
           );
           supabaseResponse = NextResponse.next({
@@ -50,7 +48,9 @@ export async function updateSession(request: NextRequest) {
   ) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();
+
     url.pathname = "/login";
+
     return NextResponse.redirect(url);
   }
 
@@ -68,4 +68,4 @@ export async function updateSession(request: NextRequest) {
   // of sync and terminate the user's session prematurely!
 
   return supabaseResponse;
-}
+};

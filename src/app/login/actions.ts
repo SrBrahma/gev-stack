@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 import { createClient } from "@/utils/supabase/server";
 
-export async function login(formData: FormData) {
+export const login = async (formData: FormData) => {
   const supabase = await createClient();
 
   // type-casting here for convenience
@@ -23,9 +23,9 @@ export async function login(formData: FormData) {
 
   revalidatePath("/", "layout");
   redirect("/");
-}
+};
 
-export async function signup(formData: FormData) {
+export const signup = async (formData: FormData) => {
   const supabase = await createClient();
 
   // type-casting here for convenience
@@ -43,4 +43,4 @@ export async function signup(formData: FormData) {
 
   revalidatePath("/", "layout");
   redirect("/");
-}
+};

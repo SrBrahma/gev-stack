@@ -4,9 +4,8 @@ import type { NextRequest } from "next/server";
 import { updateSession } from "./utils/supabase/middleware";
 
 /** Provided by https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app */
-export async function middleware(request: NextRequest) {
-  return await updateSession(request);
-}
+export const middleware = async (request: NextRequest) =>
+  await updateSession(request);
 
 export const config = {
   matcher: [

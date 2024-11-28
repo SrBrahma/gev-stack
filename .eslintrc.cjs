@@ -18,8 +18,9 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: "module",
       },
+      rules: {
+        "import/no-anonymous-default-export": "off",
+      },
     },
   ],
-  ignorePatterns: [],
-  rules: {},
 };
